@@ -14,12 +14,11 @@ class Palpite{
         $this->imagem = $imagem;
         
     }
-    public function escreveFilme($numeroPalpite){
-        $filme = "<div class='filmeSorteado'>";
+    public function escreveFilme($numeroPalpite, $sorteado){
+        $filme = "<div class='filme ".$sorteado ."'>";
         $filme .= "<h2>$numeroPalpite</h2>";
         $filme .= "<img src='" . $this->imagem . "' alt='Imagem do filme " . $this->titulo . "'>";
         $filme .= "<h2>" . $this->titulo . "</h2>";
-        $filme .= "<p>" . $this->descricao . "</p>";
         $filme .= "<p>Data de Lançamento: " . $this->dataLancamento . "</p>";
         $filme .= "<p>Diretor: " . $this->diretor . "</p>";
         $filme .= "</div>";
